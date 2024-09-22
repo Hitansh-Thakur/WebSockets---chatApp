@@ -5,20 +5,31 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+    integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+    crossorigin="anonymous"></script>
   <title>Vite App</title>
 </head>
 
 <body>
   <!-- chat app -->
-  <h1>Chat App</h1>
+  <div
+    class="container w-full h-screen px-5 bg-[url(./public/bg-wave.jpg)]  grid grid-rows-[min-content_auto_min-content]">
+    <div class="text-white pt-5">
+      <h1 class="text-3xl font-bold mb-4">Chat App</h1>
+      <h2 class="text-2xl font-semibold mb-2">Messages:</h2>
+    </div>
+    <ul id="messages" class="pl-5 text-white"></ul>
 
-  <input type="text" id="msg">
-  <button id="btn" type="submit">Send</button>
+    <div class="self-end justify-self-end w-full flex mb-4 w-full">
+      <input type="text" id="msg"
+      placeholder="Type your message here..."
+        class=" w-full p-3  rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <button id="btn" type="submit" class="p-3 bg-blue-500 text-white rounded-r-full hover:bg-blue-600">Send</button>
+    </div>
 
-  <h2>Messages:</h2>
-  <ul id="messages"></ul>
-
+  </div>
   <script type="module" src="/app.js"></script>
 </body>
 
