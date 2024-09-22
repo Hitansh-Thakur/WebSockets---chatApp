@@ -1,17 +1,21 @@
-const socket = new WebSocket('ws://localhost:8080')
+const socket = io("localhost:8080");
 
-socket.onmessage = ({data})=>{
+socket.on("connected",()=>{
+    console.log("Connected to server");
+})
+
+socket.on("message",(data)=>{
     console.log(data);
     let n = document.createElement('li')
-    n.innerText = data
-    msgul.appendChild(n)    
-    
-}
+    n.innerText = data;
+    msgs.appendChild(n)   
+})
 
-let btn = document.querySelector("#btn")
-let msg = document.querySelector("#msg").value
-let msgul = document.querySelector("#messages")
+const btn = document.querySelector("#btn");
+const msgs = document.querySelector("#messages");
 
 btn.addEventListener("click",()=>{
-    socket.send(msg);
-})
+    let msg = document.querySelector("#msg").value
+    socket.emit('message',msg);
+})    
+
