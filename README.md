@@ -48,7 +48,7 @@ This is a simple chat application built using Node.js, Express, and Socket.IO. T
 
 ## Screenshots
 
-![Chat Application]("./image.png")
+![Chat Application](./image.png)
 
 ## Author
 
