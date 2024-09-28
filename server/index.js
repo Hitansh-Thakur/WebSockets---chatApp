@@ -15,16 +15,15 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-	console.log("user logged");
+	console.log(`user logged ${socket.id}`);
 	socket.emit("connected");
-	
 	socket.on("message", (data) => {
 		// who has sent the message?
 		io.emit("message", data);
 		console.log(data);
 	});
 	socket.on("disconnect", () => {
-		console.log("user disconnected");
+		console.log("user disconnected",socket.id);
 	});
 });
 
