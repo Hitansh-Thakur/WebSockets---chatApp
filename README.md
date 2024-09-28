@@ -3,6 +3,7 @@
 This is a simple chat application built using Node.js, Express, and Socket.IO. The application allows users to send and receive messages in real-time.
 
 ## Features
+
 -   **Real-time Messaging**: Users can send and receive messages instantly.All users connected to the chat room will receive the message in real-time.
 -   **Responsive Design**: The application is styled using Tailwind CSS for a responsive and modern look.
 
@@ -10,6 +11,7 @@ This is a simple chat application built using Node.js, Express, and Socket.IO. T
 
 -   Node.js
 -   npm (Node Package Manager)
+-   git
 
 ## Installation
 
@@ -20,21 +22,15 @@ This is a simple chat application built using Node.js, Express, and Socket.IO. T
     cd chat-app
     ```
 
-2. **Install dependencies**:
-
-    ```sh
-    npm install
-    ```
-
-<!-- npm run dev for client and nodemon for server -->
-3. **Go to Client Directory**:
+2. **Go to Client Directory**:
 
     ```sh
     cd client
     npm install
     npm run dev
     ```
-4. **Go to Server Directory**:
+
+3. **Go to Server Directory**:
 
     ```sh
     cd server
@@ -42,13 +38,13 @@ This is a simple chat application built using Node.js, Express, and Socket.IO. T
     nodemon
     ```
 
-5. **Open your browser**:
+4. **Open your browser**:
 
     The application should now be running at `http://localhost:5173`.
 
 ## Screenshots
 
-![Chat Application]("./image.png")
+![Chat Application](./image.png)
 
 ## Author
 
